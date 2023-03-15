@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let wordOne = prompt('Введите слово 1').replace(/\s/g,'').toLowerCase(''); 
+        let wordTwo = prompt('Введите слово 2').replace(/\s/g,'').toLowerCase('');
+
+        if(wordOne == wordTwo){
+            alert('Это два одинаковых слова')
+        }
+        else {
+            alert('Это два разных слова')
+        };
+
+        let arrOne = Array.from(wordOne);
+        let arrTwo = Array.from(wordTwo);
+        console.log(arrOne);
+        console.log(arrTwo);
+
+        if(arrOne.length == arrTwo.length){
+            alert('Слова одинаковой длины');
+            }
+        else {
+            alert('Слова разной длины');
+            }
+        
+        let arrOne1 = arrOne.sort();
+        let arrOne2 = arrTwo.sort(); 
+        console.log(arrOne1);
+        console.log(arrOne2);
+        
+        for(let i=0; i<arrOne1.length; i++){
+        if(arrOne1[i] == arrOne2[i] && arrOne.length == arrTwo.length){
+            alert('Это анаграмма');
+            break
+            }
+            else{
+            alert('Это не анаграмма');
+            break
+            }
+        }
+        
+    </script>
+</body>
+</html>
